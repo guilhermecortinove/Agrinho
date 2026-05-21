@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroConsciente: O Desafio do Equilíbrio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>AgroConsciente</h1>
+        <p>Tema Agrinho 2026: Agro forte, futuro sustentável</p>
+    </header>
+
+    <main>
+        <section id="status-painel">
+            <div class="status-card">
+                <span>💰 Dinheiro:</span>
+                <span id="txt-dinheiro">R$ 1000</span>
+            </div>
+            <div class="status-card">
+                <span>🔋 Saúde do Solo:</span>
+                <div class="barra-progresso">
+                    <div id="barra-solo" style="width: 100%;">100%</div>
+                </div>
+            </div>
+            <div class="status-card">
+                <span>🌾 Alimento Produzido:</span>
+                <span id="txt-alimento">0 / 150 kg</span>
+            </div>
+        </section>
+
+        <section id="tela-mensagem">
+            <p id="texto-tutorial"><strong>Missão:</strong> Produza alimentos para atingir a meta da cidade antes que a rodada acabe, mas cuidado para não esgotar a Saúde do Solo! Escolha suas ações nos botões abaixo.</p>
+        </section>
+
+        <section id="controles">
+            <button id="btn-quimico" class="btn-acao">🚜 Monocultura (Lucro Rápido / Desgasta Solo)</button>
+            <button id="btn-sustentavel" class="btn-acao">🌳 Agrofloresta (Custo Médio / Recupera Solo)</button>
+            <button id="btn-biologico" class="btn-acao">🐞 Manejo Biológico (Investimento / Solo Saudável)</button>
+        </section>
+
+        <section id="progresso-jogo">
+            <p>Safra Atual: <span id="txt-safra">1</span>/5</p>
+            <button id="btn-proxima-safra" class="desativado" disabled>Avançar de Safra</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o Concurso Agrinho 2026 - Categoria Programação</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
