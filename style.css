@@ -1,123 +1,111 @@
-:root {
-    --verde-sustentavel: #2e7d32;
-    --laranja-alerta: #ef6c00;
-    --vermelho-perigo: #c62828;
-    --azul-dinheiro: #1565c0;
-    --cor-fundo: #f1f8e9;
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--cor-fundo);
-    margin: 0;
-    padding: 0;
+    background-color: #f4f7f5;
     color: #333;
+    line-height: 1.6;
 }
 
-header {
-    background-color: var(--verde-sustentavel);
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-main {
+.container {
+    width: 90%;
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 0 auto;
 }
 
-#status-painel {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
+/* Cabeçalho */
+header {
+    background-color: #0d5c3a; /* Verde escuro agrícola */
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 5px solid #c29b38; /* Detalhe em ouro */
 }
 
-.status-card {
-    background: #e8f5e9;
-    padding: 15px;
-    border-radius: 6px;
-    width: 30%;
-    min-width: 200px;
-    box-sizing: border-box;
-    font-weight: bold;
+header h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.barra-progresso {
-    background-color: #ddd;
-    border-radius: 10px;
-    margin-top: 5px;
-    overflow: hidden;
+.subtitle {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    font-weight: 300;
 }
 
-#barra-solo {
-    background-color: var(--verde-sustentavel);
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    padding: 3px 0;
-    transition: width 0.5s, background-color 0.5s;
+/* Conteúdo Principal */
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-#tela-mensagem {
-    background-color: #fffde7;
-    border-left: 5px solid #fbc02d;
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #0d5c3a;
+}
+
+h2 {
+    color: #0d5c3a;
+    margin-bottom: 15px;
+}
+
+/* Interatividade e Estados */
+#status-container {
+    margin: 20px 0;
     padding: 15px;
-    margin-bottom: 25px;
-    border-radius: 4px;
-}
-
-#controles {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.btn-acao {
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
+    background-color: #f8fafc;
     border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s;
-    color: white;
+    text-align: center;
 }
 
-#btn-quimico { background-color: var(--laranja-alerta); }
-#btn-quimico:hover { background-color: #d84315; }
+#indicador {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
 
-#btn-sustentavel { background-color: var(--verde-sustentavel); }
-#btn-sustentavel:hover { background-color: #1b5e20; }
+.neutro { background-color: #e2e8f0; color: #4a5568; }
+.sustentavel { background-color: #c6f6d5; color: #22543d; }
+.alerta { background-color: #feebc8; color: #744210; }
 
-#btn-biologico { background-color: var(--azul-dinheiro); }
-#btn-biologico:hover { background-color: #0d47a1; }
-
-#btn-proxima-safra {
+/* Botão */
+button {
+    display: block;
     width: 100%;
-    padding: 12px;
-    background-color: #9e9e9e;
+    background-color: #0d5c3a;
     color: white;
     border: none;
-    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
     font-weight: bold;
-    cursor: not-allowed;
-}
-
-#btn-proxima-safra.ativo {
-    background-color: var(--verde-sustentavel);
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
+button:hover {
+    background-color: #12754b;
+}
+
+/* Rodapé */
 footer {
+    background-color: #1a202c;
+    color: #a0aec0;
     text-align: center;
-    margin-top: 40px;
-    font-size: 12px;
-    color: #666;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
