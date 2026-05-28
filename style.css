@@ -10,6 +10,7 @@ body {
     background-color: #f4f7f5;
     color: #333;
     line-height: 1.6;
+    padding-bottom: 60px; /* Evita que o rodapé fixo cubra o conteúdo */
 }
 
 .container {
@@ -20,11 +21,11 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #0d5c3a; /* Verde escuro agrícola */
+    background-color: #0d5c3a;
     color: #ffffff;
     padding: 40px 0;
     text-align: center;
-    border-bottom: 5px solid #c29b38; /* Detalhe em ouro */
+    border-bottom: 5px solid #c29b38;
 }
 
 header h1 {
@@ -41,7 +42,7 @@ header h1 {
 /* Conteúdo Principal */
 main {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .card {
@@ -50,6 +51,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border-top: 4px solid #0d5c3a;
+    margin-bottom: 25px; /* Espaço entre os blocos */
 }
 
 h2 {
@@ -57,7 +59,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Interatividade e Estados */
+/* Interatividade da Simulação */
 #status-container {
     margin: 20px 0;
     padding: 15px;
@@ -72,14 +74,12 @@ h2 {
     margin-top: 10px;
     padding: 8px;
     border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
 .neutro { background-color: #e2e8f0; color: #4a5568; }
 .sustentavel { background-color: #c6f6d5; color: #22543d; }
 .alerta { background-color: #feebc8; color: #744210; }
 
-/* Botão */
 button {
     display: block;
     width: 100%;
@@ -98,14 +98,80 @@ button:hover {
     background-color: #12754b;
 }
 
+/* --- ESTILIZAÇÃO DO FAQ CLICÁVEL --- */
+.faq-section {
+    border-top: 4px solid #c29b38; /* Cor dourada para diferenciar */
+}
+
+.faq-intro {
+    margin-bottom: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+details {
+    background-color: #f9fbf9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Estilo da Pergunta (Botão clicável) */
+summary {
+    padding: 14px 20px;
+    font-weight: 600;
+    color: #2d3748;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid transparent;
+}
+
+summary:hover {
+    background-color: #f0f7f4;
+    color: #0d5c3a;
+}
+
+/* Quando a pergunta está aberta */
+details[open] {
+    border-color: #0d5c3a;
+    box-shadow: 0 2px 4px rgba(13, 92, 58, 0.05);
+}
+
+details[open] summary {
+    background-color: #0d5c3a;
+    color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Caixa da Resposta */
+.faq-content {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+code {
+    background-color: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #e53e3e;
+}
+
 /* Rodapé */
 footer {
     background-color: #1a202c;
     color: #a0aec0;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
+    padding: 15px 0;
+    font-size: 0.85rem;
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 10;
 }
